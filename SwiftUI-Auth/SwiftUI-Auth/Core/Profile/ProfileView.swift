@@ -12,7 +12,7 @@ struct ProfileView: View {
         List {
             Section {
                 HStack{
-                    Text("TS")
+                    Text(User.MOCK_USER.initials)
                         .font(.title)
                         .fontWeight(.semibold)
                         .foregroundColor(.white)
@@ -21,14 +21,14 @@ struct ProfileView: View {
                         .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                     
                     VStack(alignment: .leading, spacing: 4) {
-                        Text("Taylor Swift")
+                        Text(User.MOCK_USER.fullname)
                             .font(.subheadline)
                             .fontWeight(.semibold)
                             .padding(.top, 4)
                         
-                        Text("test@gmail.com")
+                        Text(User.MOCK_USER.email)
                             .font(.footnote)
-                            .accentColor(.gray)
+                            .foregroundColor(.gray)
                     }
                 }
             }
