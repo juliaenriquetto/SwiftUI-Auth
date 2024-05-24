@@ -9,12 +9,13 @@ import Foundation
 import Firebase
 import FirebaseFirestoreSwift
 
+@MainActor
 class AuthViewModel: ObservableObject {
     @Published var userSession: FirebaseAuth.User?
     @Published var currentUser: User?
     
     init() {
-        
+        self.userSession = Auth.auth().currentUser
     }
     
     func signIn(withEmail email: String, password: String) async throws {
@@ -43,6 +44,6 @@ class AuthViewModel: ObservableObject {
     }
     
     func fetchUser() async {
-        
+        guard let uid = Auth.auth().currentUser?.uid else { return }
     }
 }
