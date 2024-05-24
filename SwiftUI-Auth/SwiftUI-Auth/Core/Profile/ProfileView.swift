@@ -9,7 +9,38 @@ import SwiftUI
 
 struct ProfileView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            Section {
+                HStack{
+                    Text("TS")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .frame(width: 72, height: 72)
+                        .background(Color(.systemGray3))
+                        .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                    
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("Taylor Swift")
+                            .font(.subheadline)
+                            .fontWeight(.semibold)
+                            .padding(.top, 4)
+                        
+                        Text("test@gmail.com")
+                            .font(.footnote)
+                            .accentColor(.gray)
+                    }
+                }
+            }
+            
+            Section("General") {
+                
+            }
+            
+            Section("Account") {
+                
+            }
+        }
     }
 }
 
