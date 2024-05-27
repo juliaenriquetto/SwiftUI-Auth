@@ -71,6 +71,12 @@ struct LoginView: View {
     }
 }
 
+extension LoginView: AuthenticationFormProtocol {
+    var formIsValid: Bool {
+        <#code#>
+    }
+}
+
 #Preview {
     LoginView()
 }
