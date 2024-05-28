@@ -71,7 +71,7 @@ struct RegistrationView: View {
             }
             .background(Color(.systemBlue))
             .disabled(formIsValid)
-            .opacity(formIsValid ? 1.0 : 0.5)
+            .opacity(formIsValid ? 1.0 : 1.0)
             .cornerRadius(10)
             .padding(.top, 24)
             
